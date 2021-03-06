@@ -1,0 +1,36 @@
+{{#if this.[1]}}
+<ul>
+    {{#each this}}
+
+    <li class="country">
+        <img src="" alt="">
+        {{name}}
+    </li>
+
+
+    {{/each}}
+</ul>
+{{else}}
+<div class="country-card">
+    <img src="{{this.[0].flag}}" alt="Flag of {{this.[0].name}}" width="400px"><br />
+    <div class="country-desc">
+        <h1>{{this.[0].name}}</h1>
+
+
+        <strong>Capital:</strong> {{this.[0].capital}}<br /><br />
+        <strong>Population:</strong> {{this.[0].population}}<br /><br />
+
+        <strong>Languages:</strong>
+        <ul>{{#each this.[0].languages}}
+            <li>{{name}}</li>
+            {{/each}}
+
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+{{/if}}
